@@ -1,9 +1,11 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import { Menu } from '@headlessui/vue';
+
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <Menu>
+    </Menu>
   </main>
 </template>
