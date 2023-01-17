@@ -1,7 +1,7 @@
 <template>
 
     <header>
-        <div class="flex invisible xl:visible">
+        <div class="hidden xl:flex justify-between items-center container mx-auto">
             <MenuDesktop />
             <Logo />
             <ButtonConnexion />
