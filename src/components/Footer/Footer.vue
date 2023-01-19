@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <div class="container mx-auto mt-20 xl:flex xl:justify-between xl:items-center xl:fixed xl:bottom-0 xl:mb-2 xl:mx-4 xl:px-4">
+        <div class="container mx-auto mt-20 xl:flex xl:justify-between xl:items-center xl:fixed xl:bottom-0 xl:mb-2">
             <div>
                 <TextFooter />
                 <ContactFooter />
