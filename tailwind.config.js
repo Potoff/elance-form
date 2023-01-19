@@ -9,7 +9,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('tw-elements/dist/plugin'),
-    require('@tailwindcss/forms')
+    require('./node_modules/tw-elements/dist/plugin'),
+
   ],
 }
