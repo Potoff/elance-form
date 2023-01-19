@@ -1,14 +1,17 @@
 <template>
     <footer>
-        <div class="container mx-auto mt-20 xl:flex xl:justify-between xl:items-center xl:fixed xl:bottom-0 xl:mb-2">
-            <div>
-                <TextFooter />
-                <ContactFooter />
-            </div>
-            <NavFooter class="order-last" />
-            <div class="xl:mr-32">
-                <Icons />
-                <Copyright />
+        <div>
+            <div
+                class="mx-auto w-full mt-20 w-lg xl:flex xl:justify-around xl:items-center xl:fixed xl:bottom-0 xl:mb-2">
+                <div>
+                    <TextFooter />
+                    <ContactFooter />
+                </div>
+                <NavFooter class="order-last" />
+                <div class="xl:mr-32">
+                    <Icons />
+                    <Copyright />
+                </div>
             </div>
         </div>
     </footer>
