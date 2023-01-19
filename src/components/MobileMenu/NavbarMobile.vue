@@ -1,7 +1,7 @@
 <template>
 
     <header>
-        <div class="xl:invisible flex justify-between items-center container mx-auto">
+        <div class="xl:invisible flex justify-between items-center container mx-auto sticky">
             <Logo /> 
             <MenuMobile />           
         </div>

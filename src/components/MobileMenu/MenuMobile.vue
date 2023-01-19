@@ -18,7 +18,7 @@
                         class="btn-close box-content w-4 h-4 p-2  mb-4 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
                         data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body p-4">
+                <div class="offcanvas-body p-4 mx-auto">
                     <div class="flex flex-col">
                         <div>
                             <Disclosure as="nav" v-slot="{ open }">
@@ -30,10 +30,16 @@
                         <div>
                             <ButtonConnexion />
                         </div>
-                        <div class="flex justify-evenly mt-8 mx-4">
-                            <Facebook />
-                            <Youtube />
-                            <Instagram />
+                        <div class="flex justify-between mt-8 mx-auto w-60">
+                            <Facebook 
+                            class="w-8 cursor-pointer h-8"
+                            />
+                            <Youtube 
+                            class="w-8 cursor-pointer h-8"
+                            />
+                            <Instagram 
+                            class="w-8 cursor-pointer h-8"
+                            />
                         </div>
                     </div>
                 </div>

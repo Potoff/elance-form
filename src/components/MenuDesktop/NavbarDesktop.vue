@@ -1,9 +1,9 @@
 <template>
 
     <header>
-        <div class="hidden xl:flex justify-between items-center container mx-auto">
+        <div class="hidden xl:flex justify-between items-center container mx-auto sticky">
             <MenuDesktop />
-            <Logo />
+            <Logo class="ml-20" />
             <ButtonConnexion />
         </div>
     </header>
