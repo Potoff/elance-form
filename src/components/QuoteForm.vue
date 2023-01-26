@@ -3,7 +3,7 @@
         <div class="mt-20 w-60 mx-auto">
             <div class="mb-3 rounded-xl shadow-lg bg-white">
                 <input type="number" 
-                :class="[state.btnDisabled ? ['border-2', 'border-rose-500', 'focus:border-rose-600'] : []]"
+                :class="[state.btnDisabled ? ['border-3', 'border-red-500', 'focus:border-red-600'] : ['border-3', 'border-green-500', 'focus:border-green-600']]"
                 class="
         mx-auto
         form-control
@@ -20,12 +20,11 @@
         transition
         ease-in-out
         m-0
-        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
       " id="exampleNumber0" placeholder="Prix TTC" min="0" max="100000" v-model="state.price" @input="validateNumber"/>
             </div>          
             <div class="mb-3 rounded-xl shadow-lg bg-white">
                 <input type="number" 
-                :class="[state.btnDisabled ? ['border-2', 'border-rose-500', 'focus:border-rose-600'] : []]"
+                :class="[state.btnDisabled ? ['border-3', 'border-red-500', 'focus:border-red-600'] : ['border-3', 'border-green-500', 'focus:border-green-600']]"
                 class="
         mx-auto
         form-control
@@ -77,14 +76,12 @@ let price = ref(0)
 
 let validateNumber = (e) => {
     e.preventDefault();
-    if (state.price < 1 || price > 100000 || state.size < 1 || state.size > 100000) {
+    if (state.price < 1 || state.price > 100000 || state.size < 1 || state.size > 100000) {
         state.errorMsg = 'Merci de rentrer des chiffres correct.'
         state.btnDisabled = true
-        return false
     } else {
         state.errorMsg = "";
         state.btnDisabled = false;
-        return true
     }
 };
 
