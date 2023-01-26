@@ -1,9 +1,9 @@
 <template>
-    <form>
+    <form @submit="formSubmit">
         <div class="mt-20 w-60 mx-auto">
             <div class="mb-3 rounded-xl shadow-lg bg-white">
                 <input type="number" 
-                :class="[state.btnDisabled ? ['border-3', 'border-red-500', 'focus:border-red-600'] : ['border-3', 'border-green-500', 'focus:border-green-600']]"
+                :class="[!state.btnDisabled ? ['border-2', 'border-green-400', 'focus:border-green-800'] : ['border-2', 'border-red-400', 'focus:border-red-800']]"
                 class="
         mx-auto
         form-control
@@ -24,7 +24,7 @@
             </div>          
             <div class="mb-3 rounded-xl shadow-lg bg-white">
                 <input type="number" 
-                :class="[state.btnDisabled ? ['border-3', 'border-red-500', 'focus:border-red-600'] : ['border-3', 'border-green-500', 'focus:border-green-600']]"
+                :class="[!state.btnDisabled ? ['border-2', 'border-green-400', 'focus:border-green-800'] : ['border-2', 'border-red-400', 'focus:border-red-800']]"
                 class="
         mx-auto
         form-control
@@ -69,10 +69,10 @@ let state = reactive({
     errorMsg: '',
     price: 0,
     size: 0,
-    btnDisabled: true
+    btnDisabled: true,
 });
 
-let price = ref(0)
+
 
 let validateNumber = (e) => {
     e.preventDefault();
@@ -85,5 +85,10 @@ let validateNumber = (e) => {
     }
 };
 
+let emit = defineEmits(['submit'])
+function formSubmit(e){
+    e.preventDefault();
+    emit('submit', (state.price / (state.size * 1000)).toFixed(2))
+};
 
 </script>
