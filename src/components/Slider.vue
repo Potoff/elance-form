@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-10 bg-gradient-to-r from-transparent to-orange-700  opacity-75 rounded-xl shadow-xl flex flex-col justify-center content-center items-center">
+    <div class="mt-10 bg-gradient-to-r from-transparent to-orange-700  opacity-75 rounded-xl shadow-xl flex flex-col justify-center content-center items-center z-0">
         <div class="text-center text-lg font-medium w-10 text-white text-bold" v-text="value"></div>
         <input type="range" :disabled="true" class="w-full rounded-xl p-1 m-1"/>
     </div>
@@ -35,7 +35,7 @@ input[type="range"]:focus {
 /***** Chrome, Safari, Opera and Edge Chromium styles *****/
 /* slider track */
 input[type="range"]::-webkit-slider-runnable-track {
-   background-color: #053a5f;
+   background-color: transparent;
    border-radius: 0.5rem;
    height: 0.5rem;  
 }
@@ -47,9 +47,11 @@ input[type="range"]::-webkit-slider-thumb {
    margin-top: -12px; /* Centers thumb on the track */
 
    /*custom styles*/
-   background-color: #5cd5eb;
-   height: 1rem;
-   width: 1rem;
+   background-color: #000000;
+   height: 1.5rem;
+   width: 1.5rem;
+   border-radius: 50%;
+    padding-top: 2em;
 }
 
 input[type="range"]:focus::-webkit-slider-thumb {   
@@ -61,7 +63,7 @@ input[type="range"]:focus::-webkit-slider-thumb {
 /******** Firefox styles ********/
 /* slider track */
 input[type="range"]::-moz-range-track {
-   background-color: #053a5f;
+   background-color: transparent;
    border-radius: 0.5rem;
    height: 0.5rem;
 }
@@ -72,9 +74,10 @@ input[type="range"]::-moz-range-thumb {
    border-radius: 0; /*Removes default border-radius that FF applies*/
 
    /*custom styles*/
-   background-color: #5cd5eb;
-   height: 1rem;
-   width: 1rem;
+   background-color: #000000;
+   height: 1.5rem;
+   width: 1.5em;
+   border-radius: 50%;
 }
 
 input[type="range"]:focus::-moz-range-thumb {

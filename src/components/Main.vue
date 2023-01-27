@@ -29,5 +29,6 @@ let FormSubmit = (finalPrice) => {
     return  {price: finalPrice} ;
 }
 
+console.log(FormSubmit().price)
 
 </script>
