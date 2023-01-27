@@ -1,6 +1,6 @@
 <template>
     <div class="mt-10 bg-gradient-to-r from-transparent to-yellow-600 rounded-xl shadow-xl flex flex-col justify-center content-center items-center">
-        <div class="text-center text-lg font-medium w-full text-white text-bold">Votre prix : {{ props.value }}/kWh</div>
+        <div class="text-center text-lg font-medium w-full text-white text-bold">Votre prix : {{ props.value }}€/Wc</div>
         <input type="range" :disabled="true" class="w-full rounded-xl p-1 m-1" :value="props.value" min="0.01" max="5" step="0.01"/>
     </div>
 </template>

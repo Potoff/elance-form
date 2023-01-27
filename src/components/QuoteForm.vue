@@ -3,7 +3,7 @@
         <div class="mt-20 w-60 mx-auto">
             <div class="mb-3 rounded-xl shadow-lg bg-white">
                 <input type="number" 
-                :class="[!state.btnDisabled ? ['border-3', 'border-green-600', 'focus:border-green-800'] : ['border-3', 'border-red-600', 'focus:border-red-800']]"
+                :class="[state.btnDisabled ? ['border-2', 'border-red-500', 'focus:border-red-600'] : ['border-2', 'border-green-500', 'focus:border-green-600']]"
                 class="
         mx-auto
         form-control
@@ -24,7 +24,7 @@
             </div>          
             <div class="mb-3 rounded-xl shadow-lg bg-white">
                 <input type="number" 
-                :class="[!state.btnDisabled ? ['border-3', 'border-green-600', 'focus:border-green-800'] : ['border-3', 'border-red-600', 'focus:border-red-800']]"
+                :class="[state.btnDisabled ? ['border-2', 'border-red-500', 'focus:border-red-600'] : ['border-2', 'border-green-500', 'focus:border-green-600']]"
                 class="
         mx-auto
         form-control
