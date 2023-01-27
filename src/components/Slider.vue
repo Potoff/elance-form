@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-10 bg-gradient-to-r from-transparent to-orange-700  opacity-75 rounded-xl shadow-xl flex flex-col justify-center content-center items-center z-0">
+    <div class="mt-10 bg-gradient-to-r from-transparent to-yellow-600 rounded-xl shadow-xl flex flex-col justify-center content-center items-center">
         <div class="text-center text-lg font-medium w-10 text-white text-bold" v-text="value"></div>
         <input type="range" :disabled="true" class="w-full rounded-xl p-1 m-1"/>
     </div>
@@ -11,7 +11,6 @@ import { ref } from 'vue';
 const props = defineProps({
     value: Number
 })
-
 
 </script>
 

@@ -21,14 +21,14 @@ import { reactive } from 'vue';
 
 let state = reactive({
     showSlider: false
-})
+});
+
+console.log(state.showSlider)
 
 let FormSubmit = (finalPrice) => {
     state.showSlider = true;
-    
+    console.log(state.showSlider)
     return  {price: finalPrice} ;
 }
-
-console.log(FormSubmit().price)
 
 </script>
