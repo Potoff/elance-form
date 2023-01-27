@@ -1,7 +1,7 @@
 <template>
     <div class="mt-10 bg-gradient-to-r from-transparent to-yellow-600 rounded-xl shadow-xl flex flex-col justify-center content-center items-center">
-        <div class="text-center text-lg font-medium w-10 text-white text-bold" v-text="value"></div>
-        <input type="range" :disabled="true" class="w-full rounded-xl p-1 m-1"/>
+        <div class="text-center text-lg font-medium w-full text-white text-bold">Votre prix : {{ props.value }}/kWh</div>
+        <input type="range" :disabled="true" class="w-full rounded-xl p-1 m-1" :value="props.value" min="0.01" max="5" step="0.01"/>
     </div>
 </template>
   
@@ -12,6 +12,8 @@ const props = defineProps({
     value: Number
 })
 
+
+
 </script>
 
 <style>
@@ -21,9 +23,10 @@ const props = defineProps({
 input[type="range"] {
    -webkit-appearance: none;
     appearance: none;
-    background: transparent;
+    background: white;
+    opacity: 25%;
     cursor: pointer;
-    width: 30rem;
+    width: 100%;
 }
 
 /* Removes default focus */
@@ -36,7 +39,7 @@ input[type="range"]:focus {
 input[type="range"]::-webkit-slider-runnable-track {
    background-color: transparent;
    border-radius: 0.5rem;
-   height: 0.5rem;  
+   height: 0.1rem;  
 }
 
 /* slider thumb */
@@ -46,7 +49,7 @@ input[type="range"]::-webkit-slider-thumb {
    margin-top: -12px; /* Centers thumb on the track */
 
    /*custom styles*/
-   background-color: #000000;
+   background-color: hsl(56, 96%, 27%);
    height: 1.5rem;
    width: 1.5rem;
    border-radius: 50%;
@@ -64,7 +67,7 @@ input[type="range"]:focus::-webkit-slider-thumb {
 input[type="range"]::-moz-range-track {
    background-color: transparent;
    border-radius: 0.5rem;
-   height: 0.5rem;
+   height: 0rem;
 }
 
 /* slider thumb */
@@ -73,7 +76,7 @@ input[type="range"]::-moz-range-thumb {
    border-radius: 0; /*Removes default border-radius that FF applies*/
 
    /*custom styles*/
-   background-color: #000000;
+   background-color: hsl(56, 96%, 27%);
    height: 1.5rem;
    width: 1.5em;
    border-radius: 50%;

@@ -5,7 +5,7 @@
             <MainText />
             <QuoteForm @submit="FormSubmit">
             </QuoteForm>
-            <Slider v-if="state.showSlider" :value="FormSubmit().price">
+            <Slider v-if="state.showSlider" :value="state.finalPrice">
             </Slider>
         </div>
     </main>
@@ -19,16 +19,16 @@ import MainText from './MainText.vue';
 import QuoteForm from './QuoteForm.vue';
 import { reactive } from 'vue';
 
-let state = reactive({
-    showSlider: false
-});
-
-console.log(state.showSlider)
-
 let FormSubmit = (finalPrice) => {
     state.showSlider = true;
-    console.log(state.showSlider)
-    return  {price: finalPrice} ;
+    state.finalPrice = finalPrice
+    return   finalPrice;
 }
+
+let state = reactive({
+    showSlider: false,
+    finalPrice: 0
+});
+
 
 </script>
