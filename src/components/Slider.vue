@@ -5,10 +5,10 @@
     </div>
     <div class="flex justify-between mt-4">
       <div>
-        <h4 class="text-blue-500 font-bold">0€/wc</h4>
+        <h4 class="text-blue-400 font-bold">0€/wc</h4>
       </div>
       <div>
-        <h4 class="text-red-500 font-bold">5€/wc</h4>
+        <h4 class="text-red-400 font-bold">5€/wc</h4>
       </div>
     </div>
 </template>

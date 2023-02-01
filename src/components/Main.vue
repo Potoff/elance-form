@@ -27,21 +27,21 @@ let FormSubmit = (finalPrice) => {
     state.finalPrice = finalPrice;
     if(finalPrice < 2){
         state.message = "Le prix n’est pas complet, vérifiez votre devis"
-        state.color = 'text-blue-600'
+        state.color = 'text-blue-400'
         state.thumb = 'blue'
     }
     else if(finalPrice > 2 && finalPrice < 4){
         state.message = "Prix normal du marché, essayez de réduire le prix"
-        state.color = "text-green-600"
+        state.color = "text-green-500"
         state.thumb = "green"
     } 
     else if(finalPrice > 4 && finalPrice < 5){
         state.message = "Le prix de votre devis est élevé"
-        state.color = "text-orange-600"
+        state.color = "text-orange-500"
         state.thumb = "orange"
     } else{
         state.message = "Ce devis est hors de prix"
-        state.color = "text-red-600"
+        state.color = "text-red-500"
         state.thumb = "red"
     }
     return   finalPrice;
