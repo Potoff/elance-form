@@ -15,7 +15,6 @@
         font-normal
         text-gray-700
         bg-gray-50
-        border border-solid border-gray-300
         rounded-xl
         transition
         ease-in-out
@@ -36,7 +35,6 @@
         font-normal
         text-gray-700
         bg-gray-50 
-        border border-solid border-gray-300
         rounded-xl
         transition
         ease-in-out

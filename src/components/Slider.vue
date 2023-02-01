@@ -1,7 +1,15 @@
 <template>
-    <div class="mt-10 bg-gradient-to-r from-transparent to-yellow-600 rounded-xl shadow-xl flex flex-col justify-center content-center items-center">
-        <div class="text-center text-lg font-medium w-full text-white text-bold">Votre prix : {{ props.value }}€/Wc</div>
-        <input type="range" :disabled="true" class="w-full rounded-xl p-1 m-1" :value="props.value" min="0.01" max="5" step="0.01"/>
+    <div class="mt-10 bg-gradient-to-r from-yellow-200 to-yellow-600 rounded-xl shadow-xl flex flex-col justify-center content-center items-center">
+        <div class="text-center text-lg font-medium w-full text-white text-bold">Votre prix : <span  :class="props.color" class="font-bold">{{ props.value }}€</span>   /Wc</div>
+        <input type="range" :disabled="true" class="rounded-xl p-1 m-1" :value="props.value" min="0" max="5" step="0.01"/>
+    </div>
+    <div class="flex justify-between mt-4">
+      <div>
+        <h4 class="text-blue-500 font-bold">0€/wc</h4>
+      </div>
+      <div>
+        <h4 class="text-red-500 font-bold">5€/wc</h4>
+      </div>
     </div>
 </template>
   
@@ -9,7 +17,9 @@
 <script setup>
 import { ref } from 'vue';
 const props = defineProps({
-    value: Number
+    value: Number,
+    color: String,
+    thumb: String
 })
 
 
@@ -26,7 +36,8 @@ input[type="range"] {
     background: white;
     opacity: 25%;
     cursor: pointer;
-    width: 100%;
+    width: 95%;
+    margin: 0.5rem;
 }
 
 /* Removes default focus */
@@ -37,7 +48,6 @@ input[type="range"]:focus {
 /***** Chrome, Safari, Opera and Edge Chromium styles *****/
 /* slider track */
 input[type="range"]::-webkit-slider-runnable-track {
-   background-color: transparent;
    border-radius: 0.5rem;
    height: 0.1rem;  
 }
@@ -49,11 +59,11 @@ input[type="range"]::-webkit-slider-thumb {
    margin-top: -12px; /* Centers thumb on the track */
 
    /*custom styles*/
-   background-color: hsl(56, 96%, 27%);
-   height: 1.5rem;
+   background-color: v-bind(thumb);
    width: 1.5rem;
+   height: 1.5rem;
    border-radius: 50%;
-    padding-top: 2em;
+    opacity: 1;
 }
 
 input[type="range"]:focus::-webkit-slider-thumb {   
@@ -65,7 +75,6 @@ input[type="range"]:focus::-webkit-slider-thumb {
 /******** Firefox styles ********/
 /* slider track */
 input[type="range"]::-moz-range-track {
-   background-color: transparent;
    border-radius: 0.5rem;
    height: 0rem;
 }
@@ -76,7 +85,7 @@ input[type="range"]::-moz-range-thumb {
    border-radius: 0; /*Removes default border-radius that FF applies*/
 
    /*custom styles*/
-   background-color: hsl(56, 96%, 27%);
+   background-color: rgb(226, 166, 0);
    height: 1.5rem;
    width: 1.5em;
    border-radius: 50%;
