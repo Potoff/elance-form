@@ -2,7 +2,7 @@
     <footer>
         <div>
             <div
-                class="mx-auto w-full mt-20 w-lg xl:flex xl:justify-around xl:items-center xl:fixed xl:bottom-0 xl:mb-2">
+                class="mx-auto w-full mt-20 w-lg xl:flex xl:justify-around xl:items-center xl:sticky xl:bottom-0 xl:mb-2">
                 <div>
                     <TextFooter />
                     <ContactFooter />
