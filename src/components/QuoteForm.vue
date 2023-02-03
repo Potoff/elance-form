@@ -65,8 +65,8 @@ import { computed, ref, reactive } from 'vue';
 
 let state = reactive({
     errorMsg: '',
-    price: 0,
-    size: 0,
+    price: '',
+    size: '',
     btnDisabled: true,
 });
 
